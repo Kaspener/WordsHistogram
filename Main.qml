@@ -18,6 +18,7 @@ Window {
         title: "Choose file"
         options: FileDialog.ReadOnly
         fileMode: FileDialog.OpenFile
+        nameFilters: ["Text files (*.txt)"]
 
         onAccepted: {
             controller.filePath = selectedFile

@@ -47,7 +47,7 @@ void FileReader::start(const QString& filePath)
         return;
     }
 
- //   mutex.lock();
+    mutex.lock();
     isActive = true;
 
     QElapsedTimer timer;
@@ -76,7 +76,7 @@ void FileReader::start(const QString& filePath)
     }
 
     isActive = false;
- //   mutex.unlock();
+    mutex.unlock();
 
     emit finished();
 }
